@@ -4,4 +4,3 @@ builder = "nixpacks"
 [deploy]
 startCommand = "npm run db:migrate && npm start"
 healthcheckPath = "/"
-restartPolicyType = "on-failure"

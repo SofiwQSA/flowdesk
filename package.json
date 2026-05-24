@@ -1,0 +1,35 @@
+{
+  "name": "flowdesk",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "db:migrate": "prisma migrate deploy",
+    "db:studio": "prisma studio",
+    "db:seed": "ts-node prisma/seed.ts",
+    "backup": "ts-node --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\"}\" scripts/backup.ts",
+    "generate-secret": "ts-node --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\"}\" scripts/generate-secret.ts"
+  },
+  "dependencies": {
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "@prisma/client": "^5.13.0",
+    "next-auth": "^4.24.7",
+    "bcryptjs": "^2.4.3",
+    "stripe": "^15.7.0",
+    "@stripe/stripe-js": "^3.3.0",
+    "zod": "^3.23.4"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/bcryptjs": "^2.4.6",
+    "prisma": "^5.13.0",
+    "ts-node": "^10.9.2"
+  }
+}
